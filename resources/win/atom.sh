@@ -13,7 +13,7 @@ else
     root="$(echo $root | sed 's|/|\\/|g')"
     ATOMCMD="$(echo $PWD | sed 's/\/mnt\/\([a-z]*\)\(.*\)/\1:\2/')/atom.cmd"
     ATOMCMD="${ATOMCMD////\\}"
-  else
+  else:
     # We don't have cygpath or WSL so try pwd -W
     ATOMCMD="$(pwd -W)/atom.cmd"
   fi
